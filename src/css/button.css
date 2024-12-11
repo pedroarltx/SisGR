@@ -1,0 +1,45 @@
+@import url('/src/css/root.css');
+
+button {
+    padding: var(--btn-padding);
+    margin: 8px 5px;
+    background-color: var(--btn-bg-color);
+    color: white;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-font-size);
+    cursor: pointer;
+    transition: background-color 0.1s ease, transform 0.2s ease;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+ol > button {
+    margin: 8px 5px;
+    padding: 0px 5px;
+    background-color: var(--btn-bg-color);
+    color: white;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-font-size);
+    cursor: pointer;
+    transition: background-color 0.1s ease, transform 0.35s ease;
+    width: 100px;
+    height: 25px;
+}
+
+.trat_qbox > .teste {
+    display: flex;
+    flex-direction: column;
+}
+
+button:active {
+    transform: scale(0.50);
+    background-color: var(--btn-hover-color);
+}

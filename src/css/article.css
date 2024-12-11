@@ -1,0 +1,158 @@
+@import url('/src/css/root.css');
+
+.tab-container > article.trat_qbox{
+    margin: 55px 2px 10px 55px;
+    width: 300px;
+    height: auto;
+}
+.trat_qbox_1{
+    height: auto;
+}
+
+/* Estilos bloco de notas */
+textarea, #Ocorrência {
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    border-radius: var(--border-radius);
+    margin-top: 5px;
+    height: 350px;
+}
+#Ocorrência{
+    height: 65px;
+}
+
+/* Estilos criacao de emails e contato com o reponsavel */
+.qboxtrat, .tab-container > article, section {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: var(--border-radius);
+    margin: 40px 15px 20px 30px;
+    padding: 5px;
+    width: 600px;
+    height: auto;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    scale: 0.9;
+}
+
+
+.tab-container > article.question{
+    margin: 45px 15px 20px 5px;
+    width: 500px;
+    height: auto;
+}
+.tab-container .tab-container-notes{
+    margin: 55px 5px 5px 5px;
+}
+
+.tab-container .tab-container-emails{
+    margin: 30px 5px 30px 20px;
+}
+.tab-container .trat_qbox{
+    margin: 10px 2px 10px 55px;
+    width: 350px;
+}
+.tab-container .rest{
+    width: 600px;
+    height: 385px;
+}
+
+.tab-container .email_restabelecimento{
+    width: 500px;
+    height: 385px;
+    margin: 30px 5px 30px 1px;
+}
+
+.tab-container .email_restabelecimento button{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+.tab-container .rest button{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+select{
+    border: 1px solid #000000;
+    border-radius: var(--border-radius);
+    padding: var(--input-padding);
+    margin: var(--input-margin);
+    font-size: 14px;
+    width: 350px;
+    text-align: center;
+    transition: border-color 0.3s;
+    position: relative;
+    left: 35px;
+    @media (max-width: 768px) {
+        width: 200px;
+    };
+}
+
+/* Estilos hover */
+/* .qboxtrat:hover, .tab-container > article:hover, section:hover {
+    transform: scale(1.02);
+}
+
+.qboxtrat:hover, .tab-container1 > article:hover, section:hover {
+    transform: scale(1.02);
+} */
+
+/* Estilos tabela pronta reposta */
+.tab-container1 > article, section{
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: var(--border-radius);
+    margin: 40px 15px 20px 30px;
+    padding: 10px;
+    width: 600px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    scale: 0.85;
+}
+
+.tab-container,
+.tab-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tab-container h2,
+.tab-container1 h2 {
+    font-size: 20px;
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.tab-container p, .tab-container ul li,
+.tab-container1 p, .tab-container1 ul li,
+.tab-container ol li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    padding: 5px;
+}
+
+.tab-container ol li{
+    margin-left: 15px;
+}
+
+.tab-container ul,
+.tab-container1 ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.container {
+    overflow-x: auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.table-section {
+    max-height: 250px;
+    overflow-y: auto;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="/src/img/envelope-at-fill.svg">
+    <title>SisMail</title>
+    <link rel="stylesheet" href="/src/css/global.css">
+    <link rel="stylesheet" href="/src/css/button.css">
+    <link rel="stylesheet" href="/src/css/components.css">
+    <link rel="stylesheet" href="/src/css/article.css">
+    <link rel="stylesheet" href="/src/css/input.css">
+    <link rel="stylesheet" href="/src/css/responsiveness.css">
+    <link rel="stylesheet" href="/src/css/table.css">
+</head>
+<body>
+    <header>
+        <nav class="menu-lateral">
+            <ul>
+                <li class="item-menu">
+                    <a href="/public/pages/HomePage.html">
+                        <span class="icon"><i class="bi bi-house"></i></span>
+                        <span class="txt-link">Home</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/public/pages/Notepad.html">
+                        <span class="icon"><i class="bi bi-stickies"></i></span>
+                        <span class="txt-link">Notes</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/public/pages/CriarEmail.html">
+                        <span class="icon"><i class="bi bi-envelope-plus"></i></span>
+                        <span class="txt-link">Email</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/public/pages/Table.html">
+                        <span class="icon"><i class="bi bi-list-task"></i></span>
+                        <span class="txt-link">Tabela</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/public/pages/GasStation.html">
+                        <span class="icon"><i class="bi bi-ev-station"></i></span>
+                        <span class="txt-link">Postos</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/public/pages/QboxParti.html">
+                        <span class="icon"><i class="bi bi-quora"></i></span>
+                        <span class="txt-link">QBOX</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="/public/pages/Particularities.html">
+                        <span class="icon"><i class="bi bi-question-octagon"></i></span>
+                        <span class="txt-link">Particulariedades</span>
+                    </a>
+                </li>
+            </ul>
+        </nav><!--menu-lateral-->
+    </header>
+    <div class="container">
+        <div class="tab-container1">
+            <article>
+                <h2>Tabela Qbox</h2>
+                <p id="tab1">
+                    Placa: <input type="text" id="Placa" placeholder="Digite a placa" style="left: 45px;"><br>
+                    Carreta: <input type="text" id="Carreta" placeholder="Digite a carreta" style="left: 33px;"><br>
+                    Motorista: <input type="text" id="Motorista" placeholder="Digite o motorista" style="left: 21px;"><br>
+                    Operação: <input type="text" id="Operação" placeholder="Digite a operação" style="left: 17px;"><br>
+                    Carga: <input type="text" id="Carga" placeholder="Digite a carga" style="left: 41px;"><br>
+                    Localização: <input type="text" id="Localização" placeholder="Digite a localização" style="left: 5px;"><br>
+                    Situação: <input type="text" id="Situação" placeholder="Digite a situação" style="left: 25px;"><br>
+                    Ocorrência: <textarea id="Ocorrência" placeholder="Digite a ocorrência" rows="5" cols="1"></textarea><br>
+                </p>
+                <button id="copiarTabela" class="btn btn-primary">Copiar</button>
+                <button id="clearButton1" class="btn btn-danger">Limpar</button>
+            </article>
+        </div>
+    </div> 
+    <div id="alerta">Texto copiado!</div>
+</body>
+<script src="/js/FirebaseInit.js" type="module"></script>
+<script src="/js/FirebaseLog.js" type="module"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="/components/Header.js"></script>
+<script src="/js/Table.js"></script>
+</html>

@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/loginPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <div class="form-container sing-up">
+            <form>
+                <h1>Criar conta</h1>
+                <span>Use seu e-mail para se registrar</span>
+                <input type="email" placeholder="E-mail" id="reg_email">
+                <input type="password" placeholder="Senha">
+                <button id="registrar">Enviar!</button>
+                <p>© 2024 Pedro Henrique</p>
+            </form>
+        </div>
+        <div class="form-container sing-in">
+            <form>
+                <h1>Fazer Login</h1>
+                <span>Use seu e-mail para logar</span>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <button>Entrar</button>
+                <p>© 2024 Pedro Henrique</p>
+            </form>
+            <p></p>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem vindo de novo!</h1>
+                    <p>Entre com seus dados para efetuar login</p>
+                    <button class="hidden" id="login">Entrar</button>
+                 </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá, amigo</h1>
+                    <p>Registre seus dados para entrar</p>
+                    <button class="hidden" id="register">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type="module" src="./js/FirebaseAuth.js"></script>
+<script src="./js/LoginPage.js"></script>
+</html>

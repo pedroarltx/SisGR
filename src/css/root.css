@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #00171F;
+    --text-color: #00171F;
+    --background-color: #EBEBEB;
+    --input-padding: 5px;
+    --input-margin: 9px;
+    --border-radius: 15px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --btn-padding: 5px 25px;
+    --btn-font-size: 16px;
+    --btn-radius: 15px;
+    --btn-bg-color: #00A8E8;
+    --btn-hover-color: #003459;
+}

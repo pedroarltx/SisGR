@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 200px;
+    }
+    #ocorrencia_motorista,
+    #ocorrencia_responsavel{
+        width: 300px;
+    }
+    #ocorrencia_policial{
+        width: 150px;
+    }
+    #placa_ctt_resp,#mot_ctt_resp,#loc_ctt_resp{
+        width: 150px;
+    }
+}
+@media (max-width: 768px) {
+    .tab-container > article, section {
+        width: 350px;
+        margin: 10px;
+    }.tab-container1 > article, section {
+        width: 350px;
+        margin: 10px;
+    }
+}

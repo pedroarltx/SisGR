@@ -1,0 +1,95 @@
+@import url('/src/css/root.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos gerais para o body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--background-color);
+    user-select: none;
+}
+.col{
+    z-index: 1;
+}
+.menu-lateral{
+    z-index: 2;
+}
+
+/* Estilos para o label */
+label {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* Estilos P e H2 */
+h2,p{margin: 10px 10px;}
+
+.question p{
+    font-weight: bold;
+}
+
+
+/* Estilos para ocultar elemento do alert */
+#textoGerado,.content, #alerta {display: none;}
+/* Estilos para o alert */
+#alerta {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.tab-container,
+.tab-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tab-container h2,
+.tab-container1 h2 {
+    font-size: 20px;
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.tab-container p, .tab-container ul li,
+.tab-container1 p, .tab-container1 ul li,
+.tab-container ol li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    padding: 5px;
+}
+
+.tab-container ol li{
+    margin-left: 15px;
+}
+
+.tab-container ul,
+.tab-container1 ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.container {
+    overflow-x: auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.table-section {
+    max-height: 250px;
+    overflow-y: auto;
+}
