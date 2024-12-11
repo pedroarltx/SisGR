@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 const userCredential = await signInWithEmailAndPassword(auth, email, password);
                 console.log("User:", userCredential.user);
-                window.location.href = "/pages/HomePage.html";
+                window.location.href = "/public/pages/HomePage.html";
             } catch (error) {
                 console.error("Erro ao fazer login:", error.message);
                 alert(`Erro: ${error.message}`);
