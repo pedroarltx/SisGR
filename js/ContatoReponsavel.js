@@ -59,27 +59,47 @@ function gerarTexto() {
     texto = frasesSituacao["conf_clt"];
   }
 
-  // Copiar para a área de transferência
-  navigator.clipboard
-    .writeText(texto)
-    .then(() => {
-      const alerta = document.getElementById("alerta");
-      alerta.style.display = "block";
-      setTimeout(() => {
-        alerta.style.opacity = "1";
-      }, 10);
+// Copiar para a área de transferência
+navigator.clipboard
+  .writeText(texto)
+  .then(() => {
+    // Alerta de sucesso
+    const alerta = document.getElementById("alerta");
+    alerta.style.display = "block";
+    alerta.style.backgroundColor = "green";  // Cor de fundo para sucesso
+    alerta.textContent = "Texto copiado com sucesso!";  // Mensagem de sucesso
 
+    setTimeout(() => {
+      alerta.style.opacity = "1";
+    }, 10);
+
+    setTimeout(() => {
+      alerta.style.opacity = "0";
       setTimeout(() => {
-        alerta.style.opacity = "0";
-        setTimeout(() => {
-          alerta.style.display = "none";
-        }, 500);
-      }, 2000);
-    })
-    .catch((err) => {
-      console.error("Erro ao copiar o texto: ", err);
-    });
-}
+        alerta.style.display = "none";
+      }, 500);
+    }, 2000);
+  })
+  .catch((err) => {
+    // Alerta de erro
+    const alerta = document.getElementById("alerta");
+    alerta.style.display = "block";
+    alerta.style.backgroundColor = "red";  // Cor de fundo para erro
+    alerta.textContent = "Erro ao copiar o texto!";  // Mensagem de erro
+
+    setTimeout(() => {
+      alerta.style.opacity = "1";
+    }, 10);
+
+    setTimeout(() => {
+      alerta.style.opacity = "0";
+      setTimeout(() => {
+        alerta.style.display = "none";
+      }, 500);
+    }, 2000);
+
+    console.error("Erro ao copiar o texto: ", err);
+});
 
 // Função para limpar o formulário
 function limparFormulario() {
