@@ -40,6 +40,6 @@ ol > button {
 }
 
 button:active {
-    transform: scale(0.50);
+    transform: scale(0.96);
     background-color: var(--btn-hover-color);
 }
