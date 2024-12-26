@@ -1,69 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" type="imagex/png" href="/src/img/envelope-at-fill.svg">
     <title>SisMail</title>
-    <link rel="stylesheet" href="/src/css/global.css">
-    <link rel="stylesheet" href="/src/css/components.css">
+    <link rel="stylesheet" href="/src/css/homepage.css">
 </head>
+
 <body>
-  <header class="d-flex justify-content-between align-items-center p-3 mb-4 border-bottom">
-    <div class="logo">
-        <img src="/src/img/envelope-at-fill.svg" alt="Logo do Site" height="35">
+    <header class="d-flex justify-content-between align-items-center p-3 mb-4 border-bottom">
+        <div class="logo">
+            <img src="/src/img/envelope-at-fill.svg" alt="Logo do Site" height="35">
+        </div>
+        <div class="d-flex justify-content-center w-25">
+            <div class="sobre" style="margin-right: 10px; font-size: 1.2em;">
+                <a href="#sobre" class="text-decoration-none text-dark">Sobre</a>
+            </div>
+            <div class="contato" style="margin-left: 10px; font-size: 1.2em;">
+                <a href="#contato" class="text-decoration-none text-dark">Contatos</a>
+            </div>
+            <div class="contato" style="margin-left: 10px; font-size: 1.2em;">
+                <a href="#contato" class="text-decoration-none text-dark">Relatorios</a>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div id="monitoramento" class="col-md-3">
+                <div class="blocks">
+                    <h4>Monitoramento</h2>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='CriarEmail.html'">
+                        <h3 class="text-center">Criar E-mail</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='QboxParti.html'">
+                        <h3 class="text-center">Partic. Qbox</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='Particularities.html'">
+                        <h3 class="text-center">Particularidades</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Acompanhar SM</h3>
+                    </button>
+                </div>
+            </div>
+            <div id="checklist" class="col-md-3">
+                <div class="blocks">
+                    <h4>Checklist</h2>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Realizar Checklist</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Cadastro de Checklist</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Vencimento Checklist</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Liberação de viagem</h3>
+                    </button>
+                </div>
+            </div>
+            <div id="checklist" class="col-md-3">
+                <div class="blocks">
+                    <h4>Cadastro</h2>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Cadastro de veiculo</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Cadastro de Motorista</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Cadastro de Transportadora</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Cadastro de SM</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Cadastro de Posição</h3>
+                    </button>
+                </div>
+            </div>
+            <div id="checklist" class="col-md-3">
+                <div class="blocks">
+                    <h4>Ferramentas</h2>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Lottem</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Lottem</h3>
+                    </button>
+                </div>
+                <div class="blocks">
+                    <button type="button" class="btn btn-primary w-100" onclick="location.href='#'">
+                        <h3 class="text-center">Lottem</h3>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="d-flex justify-content-center w-25">
-        <div class="sobre" style="margin-right: 10px; font-size: 1.2em;">
-            <a href="#sobre" class="text-decoration-none text-dark">Sobre</a>
-        </div>
-        <div class="contato" style="margin-left: 10px; font-size: 1.2em;">
-            <a href="#contato" class="text-decoration-none text-dark">Contato</a>
-        </div>
-    </div>
-</header>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-3">
-            <button type="button" class="btn btn-primary w-100" onclick="location.href='CriarEmail.html'">
-                <h3 class="text-center">Criar E-mail</h3>
-            </button>
-        </div>
-        <div class="col-md-3">
-            <button type="button" class="btn btn-primary w-100" onclick="location.href='Notepad.html'">
-                <h3 class="text-center">Bloco de Notas</h3>
-            </button>
-        </div>
-        <div class="col-md-3">
-            <button type="button" class="btn btn-primary w-100" onclick="location.href='Particularities.html'">
-                <h3 class="text-center">Particulariedades</h3>
-            </button>
-        </div>
-        <div class="col-md-3">
-            <button type="button" class="btn btn-primary w-100" onclick="location.href='GasStations.html'">
-                <h3 class="text-center">Postos Autorizados</h3>
-            </button>
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-md-3">
-            <button type="button" class="btn btn-primary w-100" onclick="location.href='QboxParti.html'">
-                <h3 class="text-center">Partic. Qbox</h3>
-            </button>
-        </div>
-        <div class="col-md-3">
-            <button type="button" class="btn btn-primary w-100" onclick="location.href='QboxTable.html'">
-                <h3 class="text-center">Tabela Qbox</h3>
-            </button>
-        </div>
-    </div>
-</div>
 </body>
 <script src="/js/FirebaseInit.js" type="module"></script>
 <script src="/js/FirebaseLog.js" type="module"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
 </html>

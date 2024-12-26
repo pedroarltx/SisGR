@@ -1,0 +1,12 @@
+@import url(global.css);
+
+h3, h4{ 
+    text-align: center;
+    margin: 0px;
+    padding: 10;
+    font-size: 20px;
+}
+
+.blocks{
+    margin: 10px 0;
+}
