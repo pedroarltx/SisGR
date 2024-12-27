@@ -9,7 +9,7 @@ export function logout() {
   auth
     .signOut()
     .then(() => {
-      window.location.href = "./index.html"; // Redirecionar após o logout
+      window.location.href = "index.html"; // Redirecionar após o logout
     })
     .catch(() => {
       alert("Erro ao fazer logout");
@@ -41,7 +41,7 @@ function monitorAuthState() {
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       // Se o usuário não está autenticado, redirecione
-      window.location.href = "./index.html";
+      window.location.href = "index.html";
     } else {
       // Se o usuário está autenticado, configurar o listener de inatividade
       setupUserActivityListener();
