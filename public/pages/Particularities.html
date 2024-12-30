@@ -101,6 +101,24 @@
         >
           Adicionar Box
         </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-toggle="modal"
+          data-target="#modalDeleteBox"
+          id="excluirBox"
+        >
+          Excluir Box
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          data-toggle="modal"
+          data-target="#modalEditBox"
+          id="editBox"
+        >
+          Editar Box
+        </button>
 
         <!-- Modal de criação -->
         <div
@@ -178,79 +196,135 @@
           </div>
         </div>
 
-        <!-- Modal para edição -->
         <div
-          class="modal fade"
-          id="modalEditBox"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modalEditBoxLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalEditBoxLabel">Editar Box</h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form id="formEditBox">
-                  <div class="form-group">
-                    <label for="editTitulo">Título</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="editTitulo"
-                      placeholder="Digite o título"
-                    />
-                  </div>
-                  <label for="editConteudo">Conteúdo</label>
-                  <input 
-                    type="text" 
-                    class="form-control edit-conteudo"
-                    placeholder="1 - linha"
+        class="modal fade"
+        id="modalEditBox"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalEditBoxLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEditBoxLabel">Editar Box</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="formEditBox">
+                <!-- Select para escolher a box -->
+                <div class="form-group">
+                  <label for="selectBox">Selecione o Box</label>
+                  <select class="form-control" id="selectBox">
+                    <option value="">Selecione um box</option>
+                    <!-- As opções serão adicionadas dinamicamente -->
+                  </select>
+                </div>
+      
+                <div class="form-group">
+                  <label for="editTitulo">Título</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editTitulo"
+                    placeholder="Digite o título"
                   />
-                  <input 
-                    type="text" 
-                    class="form-control edit-conteudo"
-                    placeholder="2 - linha"
-                  />
-                  <input 
-                    type="text" 
-                    class="form-control edit-conteudo"
-                    placeholder="3 - linha"
-                  />
-                  <input 
-                    type="text" 
-                    class="form-control edit-conteudo"
-                    placeholder="4 - linha"
-                  />
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Fechar
-                </button>
-                <button type="button" class="btn btn-primary" id="salvarAlteracoes">
-                  Salvar Alterações
-                </button>
-              </div>
+                </div>
+                <label for="editConteudo">Conteúdo</label>
+                <input
+                  type="text"
+                  class="form-control edit-conteudo"
+                  placeholder="1 - linha"
+                />
+                <input
+                  type="text"
+                  class="form-control edit-conteudo"
+                  placeholder="2 - linha"
+                />
+                <input
+                  type="text"
+                  class="form-control edit-conteudo"
+                  placeholder="3 - linha"
+                />
+                <input
+                  type="text"
+                  class="form-control edit-conteudo"
+                  placeholder="4 - linha"
+                />
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Fechar
+              </button>
+              <button type="button" class="btn btn-primary" id="salvarAlteracoes">
+                Salvar Alterações
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Modal para exclusão -->
+<div
+class="modal fade"
+id="modalDeleteBox"
+tabindex="-1"
+role="dialog"
+aria-labelledby="modalDeleteBoxLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalDeleteBoxLabel">Excluir Box</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
+    <div class="modal-body">
+      <form id="formDeleteBox">
+        <!-- Select para escolher a box -->
+        <div class="form-group">
+          <label for="selectDeleteBox">Selecione o Box para Excluir</label>
+          <select class="form-control" id="selectDeleteBox">
+            <option value="">Selecione um box</option>
+            <!-- As opções serão adicionadas dinamicamente -->
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-dismiss="modal"
+      >
+        Fechar
+      </button>
+      <button type="button" class="btn btn-danger" id="excluirBoxBtn">
+        Excluir Box
+      </button>
+    </div>
+  </div>
+</div>
+</div>
 
     <script src="/js/FirebaseInit.js" type="module"></script>
     <script src="/js/FirebaseLog.js" type="module"></script>

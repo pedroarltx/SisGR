@@ -156,3 +156,17 @@ select{
     max-height: 250px;
     overflow-y: auto;
 }
+
+#modalEditBox,
+#modalDeleteBox{
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    scale: .97;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.form-group {
+    margin-bottom: 0;
+}

@@ -49,3 +49,15 @@ button:active {
     bottom: 15px;
     right: 15px;
 }
+
+#editBox{
+    position: fixed;
+    bottom: 15px;
+    right: 150px;
+}
+
+#excluirBox{
+    position: fixed;
+    bottom: 15px;
+    right: 260px;
+}

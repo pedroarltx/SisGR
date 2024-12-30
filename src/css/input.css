@@ -4,6 +4,11 @@ input[type="text"]#restricao_text {
     width: 50px;
 }
 
+#selectBox,
+#selectDeleteBox{
+    width: 350px;
+}
+
 input[type="text"], input[type="number"] {
     padding: var(--input-padding);
     margin: var(--input-margin);
