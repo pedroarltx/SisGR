@@ -9,15 +9,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 10px;
     background-color: var(--background-color);
     user-select: none;
-}
-.col{
-    z-index: 1;
-}
-.menu-lateral{
-    z-index: 2;
 }
 
 /* Estilos para o label */
