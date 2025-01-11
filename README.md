@@ -1,4 +1,4 @@
-//Gerenciamento de Risco e Monitoramento de Carga
+Gerenciamento de Risco e Monitoramento de Carga
 Este projeto foi desenvolvido para otimizar o gerenciamento de risco no monitoramento de cargas, oferecendo ferramentas para melhorar a eficiência e a personalização dos processos.
 
 Funcionalidades Principais
