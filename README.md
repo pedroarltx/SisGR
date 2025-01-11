@@ -16,9 +16,4 @@ CSS<br>
 JavaScript<br>
 Firebase
 
-📖 Estrutura do Projeto<br>
-src/<br>
-├── components/    # Componentes reutilizáveis<br>
-├── pages/         # Páginas principais<br>
-├── services/      # Regras de negócio e integração<br>
-└── assets/        # Imagens e arquivos estáticos<br>
+//
