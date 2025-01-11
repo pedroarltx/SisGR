@@ -4,10 +4,9 @@ Este projeto foi desenvolvido para otimizar o gerenciamento de risco no monitora
 
 ✨ Funcionalidades
 
-📧 Criação de E-mails Automatizados
-Facilita a comunicação com clientes ou equipes em eventos críticos.
-📦 Personalização de Boxes
-
+📧 Criação de E-mails Automatizados:<br>
+Facilita a comunicação com clientes ou equipes em eventos críticos.<br>
+📦 Personalização de Boxes:<br>
 Permite adicionar particularidades de cada base de veículos, ajustando o sistema às necessidades operacionais.
 
 🛠 Tecnologias Utilizada
