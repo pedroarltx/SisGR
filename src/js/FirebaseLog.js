@@ -1,6 +1,3 @@
-// seu-script.js
-
-// Importe a instância do Firebase e os serviços necessários
 import app from './firebase-config.js';  // Garanta que a configuração foi importada
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
