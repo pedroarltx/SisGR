@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/src/img/envelope-at-fill.svg" />
+  <title>SisMail</title>
+  <link rel="stylesheet" href="/src/css/global.css" />
+  <link rel="stylesheet" href="/src/css/button.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <link rel="stylesheet" href="/src/css/article.css" />
+  <link rel="stylesheet" href="/src/css/input.css" />
+  <link rel="stylesheet" href="/src/css/responsiveness.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="menu-lateral">
+      <ul>
+        <li class="item-menu">
+          <a href="/HomePage.html">
+            <span class="icon"><i class="bi bi-house"></i></span>
+            <span class="txt-link">Home</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./Notepad.html">
+            <span class="icon"><i class="bi bi-stickies"></i></span>
+            <span class="txt-link">Notes</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./CriarEmail.html">
+            <span class="icon"><i class="bi bi-envelope-plus"></i></span>
+            <span class="txt-link">Email</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./Table.html">
+            <span class="icon"><i class="bi bi-list-task"></i></span>
+            <span class="txt-link">Tabela</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./GasStation.html">
+            <span class="icon"><i class="bi bi-ev-station"></i></span>
+            <span class="txt-link">Postos</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./QboxParti.html">
+            <span class="icon"><i class="bi bi-quora"></i></span>
+            <span class="txt-link">QBOX</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./Particularities.html">
+            <span class="icon"><i class="bi bi-question-octagon"></i></span>
+            <span class="txt-link">Particulariedades</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container" id="myTabContent">
+    <div class="tab-pane fade show active" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
+      <div class="tab-container" id="boxes-container">
+        <!-- As boxes serão renderizadas aqui -->
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <!-- Botão para abrir o modal de criação -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBox" id="test">
+        Adicionar Box
+      </button>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDeleteBox" id="excluirBox">
+        Excluir Box
+      </button>
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalEditBox" id="editBox">
+        Editar Box
+      </button>
+
+      <!-- Modal de criação -->
+      <div class="modal fade" id="modalBox" tabindex="-1" role="dialog" aria-labelledby="modalBoxLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalBoxLabel">Criar Nova Box</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="formBox">
+                <div class="form-group">
+                  <label for="titulo">Título</label>
+                  <input type="text" class="form-control" id="titulo" placeholder="Digite o título" />
+                </div>
+                <label for="conteudo">Conteúdo</label>
+                <input type="text" class="form-control" id="conteudo" placeholder="1 - linha" />
+                <input type="text" class="form-control" id="conteudo" placeholder="2 - linha" />
+                <input type="text" class="form-control" id="conteudo" placeholder="3 - linha" />
+                <input type="text" class="form-control" id="conteudo" placeholder="4 - linha" />
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Fechar
+              </button>
+              <button type="button" class="btn btn-primary" id="adicionarBox">
+                Adicionar Box
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalEditBox" tabindex="-1" role="dialog" aria-labelledby="modalEditBoxLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEditBoxLabel">Editar Box</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="formEditBox">
+                <!-- Select para escolher a box -->
+                <div class="form-group">
+                  <label for="selectBox">Selecione o Box</label>
+                  <select class="form-control" id="selectBox">
+                    <option value="">Selecione um box</option>
+                    <!-- As opções serão adicionadas dinamicamente -->
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="editTitulo">Título</label>
+                  <input type="text" class="form-control" id="editTitulo" placeholder="Digite o título" />
+                </div>
+                <label for="editConteudo">Conteúdo</label>
+                <input type="text" class="form-control edit-conteudo" placeholder="1 - linha" />
+                <input type="text" class="form-control edit-conteudo" placeholder="2 - linha" />
+                <input type="text" class="form-control edit-conteudo" placeholder="3 - linha" />
+                <input type="text" class="form-control edit-conteudo" placeholder="4 - linha" />
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Fechar
+              </button>
+              <button type="button" class="btn btn-primary" id="salvarAlteracoes">
+                Salvar Alterações
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal para exclusão -->
+      <div class="modal fade" id="modalDeleteBox" tabindex="-1" role="dialog" aria-labelledby="modalDeleteBoxLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDeleteBoxLabel">Excluir Box</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="formDeleteBox">
+                <!-- Select para escolher a box -->
+                <div class="form-group">
+                  <label for="selectDeleteBox">Selecione o Box para Excluir</label>
+                  <select class="form-control" id="selectDeleteBox">
+                    <option value="">Selecione um box</option>
+                    <!-- As opções serão adicionadas dinamicamente -->
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Fechar
+              </button>
+              <button type="button" class="btn btn-danger" id="excluirBoxBtn">
+                Excluir Box
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="../js/FirebaseInit.js" type="module"></script>
+      <script src="../js/FirebaseLog.js" type="module"></script>
+      <script type="module" src="../js/CreateNewBox.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

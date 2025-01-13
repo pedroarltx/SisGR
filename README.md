@@ -1,19 +1,25 @@
-🚛 Gerenciamento de Risco e Monitoramento de Carga.
+<h1>🚛 Gerenciamento de Risco e Monitoramento de Carga.</h1>
 
-Este projeto foi desenvolvido para otimizar o gerenciamento de risco no monitoramento de cargas, oferecendo ferramentas que melhoram a eficiência e a personalização dos processos logísticos.
+<p>Este projeto foi desenvolvido para otimizar o gerenciamento de risco no monitoramento de cargas, oferecendo ferramentas que melhoram a eficiência e a personalização dos processos logísticos.</p>
 
-✨ Funcionalidades
+<h3>✨ Funcionalidades</h3>
 
-📧 Criação de E-mails Automatizados:<br>
-Facilita a comunicação com clientes ou equipes em eventos críticos.<br>
-📦 Personalização de Boxes:<br>
-Permite adicionar particularidades de cada base de veículos, ajustando o sistema às necessidades operacionais.
+<ul>
+  <li>
+    📧 Criação de E-mails Automatizados:<br>
+    Facilita a comunicação com clientes ou equipes em eventos críticos.<br>
+  <li>
+  <li>
+    📦 Personalização de Boxes:<br>
+    Permite adicionar particularidades de cada base de veículos, ajustando o sistema às necessidades operacionais.
+  </li>
+</ul>
 
-🛠 Tecnologias Utilizada
+<h3>🛠 Tecnologias Utilizada</h3>
 
-HTML<br>
-CSS<br>
-JavaScript<br>
-Firebase
-
-//
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>Firebase</li>
+</ul>
