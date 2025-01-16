@@ -534,10 +534,12 @@
     <div
       id="alertaerro"
       style="display: none; opacity: 0; transition: opacity 0.5s ease"
-    ></div>
+    >
+      Erro ao copiar!
+    </div>
     <script>
       function copiarTexto(id) {
-        const paragrafo = document.getElementById(id);
+        const paragrafo = document.querySelector(id);
         const textarea = document.createElement("textarea");
         textarea.value = paragrafo.textContent;
         document.body.appendChild(textarea);
@@ -546,19 +548,6 @@
         document.body.removeChild(textarea);
 
         mostrarAlerta();
-      }
-
-      function mostrarAlerta() {
-        const alerta = document.getElementById("alerta");
-        alerta.style.display = "block";
-        alerta.style.opacity = "1";
-
-        setTimeout(() => {
-          alerta.style.opacity = "0";
-          setTimeout(() => {
-            alerta.style.display = "none";
-          }, 500);
-        }, 2000);
       }
     </script>
   </body>

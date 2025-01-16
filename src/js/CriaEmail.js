@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function gerarTexto() {
     let texto = "";
-
     texto += gerarTextoContato(
       "motorista",
       "nome_motorista",
@@ -110,8 +109,26 @@ document.addEventListener("DOMContentLoaded", () => {
     document.execCommand("copy");
     textoArea.style.display = "none";
 
-    mostrarAlerta();
+    navigator.clipboard.writeText(texto)
+    .then(() => {
+      const alerta = document.getElementById("alerta");
+      alerta.style.display = "block";
+      setTimeout(() => {
+        alerta.style.opacity = "1";
+      }, 10);
+
+      setTimeout(() => {
+        alerta.style.opacity = "0";
+        setTimeout(() => {
+          alerta.style.display = "none";
+        }, 500);
+      }, 2000);
+    })
+    .catch((err) => {
+      console.error("Erro ao copiar o texto: ", err);
+    });
   }
+
 
   document.getElementById("gerarTexto_tab").addEventListener("click", gerarTexto);
   document.getElementById("limparEscolhas").addEventListener("click", limparEscolhas);

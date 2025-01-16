@@ -98,14 +98,6 @@ function limparFormulario() {
   toggleOcorrencia("sim_resp", "ocorrencia_responsavel");
   toggleOcorrencia("sim_policia", "ocorrencia_policial");
 
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = false;
-    });
-
-    ["contato_condutor", "contato_responsavel", "acionamento_policial"].forEach((groupName) => {
-      toggleOcorrencia1(groupName, `ocorrencia_${groupName.split("_")[1]}`);
-    });
 
   //contato reponsavel
   document.getElementById("sit_ctt_resp").value = "";
@@ -119,6 +111,16 @@ function limparFormulario() {
   document.getElementById("nao_ctt").checked = false;
   document.getElementById("ocorrencia_ctt_resp").value = "";
   toggleOcorrencia("sim_ctt", "ocorrencia_ctt_resp");
+
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+
+  ["contato_condutor", "contato_responsavel", "acionamento_policial"].forEach((groupName) => {
+    toggleOcorrencia1(groupName, `ocorrencia_${groupName.split("_")[1]}`);
+  });
+
 }
 
 // Eventos de clique para limpar e gerar texto
@@ -141,4 +143,35 @@ function toggleOcorrencia(groupName, ocorrenciaId) {
   }
 
   ocorrencia.style.display = showOcorrencia ? "block" : "none";
+}
+
+const fraseEmail = {
+
+  perdaclt: "Notificamos que o veículo em questão está com perda de sinal em pátio de cliente/transportadora. Deste modo não seguiremos com o procedimento de contingência. Veículo não gerou alerta antes da perda. Todos os comandos cabíveis foram enviados ao veículo.",
+  retirada: "Notificamos que o veículo em questão permanece sem o espelhamento para nossa central. Desta forma notificamos os responsáveis.",
+  alerta: "o condutor do veículo em questão voltou a seguir viagem, encontra-se com sinal atualizado e segue a rota pré-estabelecida em sua solicitação de monitoramento, não gerou demais violações. Salientamos que a ocorrência policial foi devidamente finalizada.",
+  sinal: "o veículo em questão voltou a posicionar em nosso sistema, segue a rota pré-estabelecida em sua solicitação de monitoramento e não gerou demais violações. Salientamos que a ocorrência olicial foi devidamente finalizada."
+
+};
+
+function copiarTexto(id){
+  const texto = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(texto)
+    .then(() => {
+      const alerta = document.getElementById("alerta");
+      alerta.style.display = "block";
+      setTimeout(() => {
+        alerta.style.opacity = "1";
+      }, 10);
+
+      setTimeout(() => {
+        alerta.style.opacity = "0";
+        setTimeout(() => {
+          alerta.style.display = "none";
+        }, 500);
+      }, 2000);
+    })
+    .catch((err) => {
+      console.error("Erro ao copiar o texto: ", err);
+    });
 }
