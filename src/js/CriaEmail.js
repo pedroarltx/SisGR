@@ -1,28 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  function copiarTexto(id) {
-    const paragrafo = document.getElementById(id);
-    const textarea = document.createElement("textarea");
-    textarea.value = paragrafo.textContent;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-
-    mostrarAlerta();
-  }
-
-  function mostrarAlerta() {
-    const alerta = document.getElementById("alerta");
-    alerta.style.display = "block";
-    alerta.style.opacity = "1";
-
-    setTimeout(() => {
-      alerta.style.opacity = "0";
-      setTimeout(() => {
-        alerta.style.display = "none";
-      }, 500);
-    }, 2000);
-  }
 
   function gerarTexto() {
     let texto = "";
@@ -135,39 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     textoArea.style.display = "none";
 
     mostrarAlerta();
-  }
-
-  function limparEscolhas() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = false;
-    });
-
-    ["contato_condutor", "contato_responsavel", "acionamento_policial"].forEach((groupName) => {
-      toggleOcorrencia1(groupName, `ocorrencia_${groupName.split("_")[1]}`);
-    });
-
-    ["nome_motorista", "numero_motorista", "nome_responsavel", "numero_responsavel", "nome_policial", "numero_policial", "ocorrencia_policial", "ocorrencia_motorista", "ocorrencia_responsavel", "restricao_text"].forEach((id) => {
-      document.getElementById(id).value = "";
-    });
-
-    ["ocorrencia_motorista", "ocorrencia_responsavel", "ocorrencia_policial"].forEach((id) => {
-      document.getElementById(id).style.display = "none";
-    });
-  }
-  function toggleOcorrencia1(groupName, ocorrenciaId) {
-    const checkboxes = document.getElementsByName(groupName);
-    const ocorrencia = document.getElementById(ocorrenciaId);
-
-    let showOcorrencia = false;
-    for (const checkbox of checkboxes) {
-      if (checkbox.checked && checkbox.value === "sim") {
-        showOcorrencia = true;
-        break;
-      }
-    }
-
-    ocorrencia.style.display = showOcorrencia ? "block" : "none";
   }
 
   document.getElementById("gerarTexto_tab").addEventListener("click", gerarTexto);

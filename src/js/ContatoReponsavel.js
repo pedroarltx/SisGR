@@ -80,6 +80,34 @@ function gerarTexto() {
 
 // Função para limpar o formulário
 function limparFormulario() {
+  //contato motorita
+  document.getElementById("nome_motorista").value = "";
+  document.getElementById("numero_motorista").value = "";
+  document.getElementById("nome_responsavel").value = "";
+  document.getElementById("numero_responsavel").value = "";
+  document.getElementById("nome_policial").value = "";
+  document.getElementById("numero_policial").value = "";
+  document.getElementById("ocorrencia_policial").value = "";
+  document.getElementById("ocorrencia_motorista").value = "";
+  document.getElementById("ocorrencia_responsavel").value = "";
+  document.getElementById("restricao_text").value = "";
+  document.getElementById("sim_email").checked = false;
+  document.getElementById("sim_resp").checked = false;
+  document.getElementById("sim_policia").checked = false;
+  toggleOcorrencia("sim_email", "ocorrencia_motorista");
+  toggleOcorrencia("sim_resp", "ocorrencia_responsavel");
+  toggleOcorrencia("sim_policia", "ocorrencia_policial");
+
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+
+    ["contato_condutor", "contato_responsavel", "acionamento_policial"].forEach((groupName) => {
+      toggleOcorrencia1(groupName, `ocorrencia_${groupName.split("_")[1]}`);
+    });
+
+  //contato reponsavel
   document.getElementById("sit_ctt_resp").value = "";
   document.getElementById("extra_option_list").value = "";
   document.getElementById("show_extra_options").checked = false;
@@ -95,18 +123,20 @@ function limparFormulario() {
 
 // Eventos de clique para limpar e gerar texto
 document.getElementById("limparEscolhas_ctt").addEventListener("click", limparFormulario);
+document.getElementById("limparEscolhas").addEventListener("click", limparFormulario)
 document.getElementById("gerarTexto_ctt").addEventListener("click", gerarTexto);
 
 // Função para alternar a exibição do campo de ocorrência
 function toggleOcorrencia(groupName, ocorrenciaId) {
-  const radios = document.getElementsByName(groupName);
+  const checkboxes = document.getElementsByName(groupName);
   const ocorrencia = document.getElementById(ocorrenciaId);
-  let showOcorrencia = false;
 
-  for (const radio of radios) {
-    if (radio.checked && radio.value === "sim") {
+  let showOcorrencia = false;
+  for (const checkbox of checkboxes) {
+    if (checkbox.checked && checkbox.value === "sim") {
       showOcorrencia = true;
-      break;
+    } else if(checkbox.checked && checkbox.value === false){
+      showOcorrencia = false;
     }
   }
 
