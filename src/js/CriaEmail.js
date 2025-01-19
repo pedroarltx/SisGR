@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // Função para gerar o texto
   function gerarTexto() {
     let texto = "";
     texto += gerarTextoContato(
@@ -25,6 +26,25 @@ document.addEventListener("DOMContentLoaded", () => {
     exibirTextoGerado(texto.trim());
   }
 
+  // Função para formatar telefone
+  function formatarTelefone(telefone) {
+    // Remover qualquer caractere não numérico
+    const numeros = telefone.replace(/\D/g, "");
+
+    // Verificar se tem o número correto de dígitos
+    if (numeros.length === 11) {
+      return `(${numeros.slice(0, 2)}) ${numeros.slice(2, 3)} ${numeros.slice(3, 6)}-${numeros.slice(6)}`;
+    }
+    return telefone; // Retorna o número sem formatação caso não tenha o formato correto
+  }
+
+  // Função para garantir que a primeira letra do nome seja maiúscula
+  function formatarNome(nome) {
+    if (!nome) return ""; // Caso o nome esteja vazio
+    return nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase(); // Primeira letra maiúscula e o restante minúsculo
+  }
+
+  // Função para gerar texto do contato
   function gerarTextoContato(
     tipo,
     nomeId,
@@ -32,12 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
     contatoName,
     ocorrenciaId
   ) {
-    const nome = document.getElementById(nomeId).value.trim();
-    const numero = document.getElementById(numeroId).value.trim();
+    let nome = document.getElementById(nomeId).value.trim();
+    let numero = document.getElementById(numeroId).value.trim();
     const contato = document.querySelector(`input[name="${contatoName}"]:checked`);
     const ocorrencia = document.getElementById(ocorrenciaId).value.trim();
 
     if (!contato) return "";
+
+    nome = formatarNome(nome); // Garantir que o nome tenha a primeira letra maiúscula
+    numero = formatarTelefone(numero); // Formatar o telefone
 
     if (contato.value === "sim") {
       return `Em contato com o Sr. ${nome} (${tipo}), pelo telefone ${numero}, o mesmo nos informou que ${ocorrencia}. `;
@@ -50,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return "";
   }
 
+  // Função para gerar texto do grupo de transportadora
   function gerarTextoGrupo() {
     const transportadoras = document.querySelector(
       'input[name="contato_responsavel_grupo"]:checked'
@@ -80,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return "";
   }
 
+  // Função para gerar texto do contato policial
   function gerarTextoPolicia() {
     const nomePolicial = document.getElementById("nome_policial").value.trim();
     const numeroPolicial = document.getElementById("numero_policial").value.trim();
@@ -90,10 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!acionamentoPolicial) return "";
 
+    const nomePolicialFormatado = formatarNome(nomePolicial); // Formatando nome policial
+    const numeroPolicialFormatado = formatarTelefone(numeroPolicial); // Formatando número policial
+
     if (acionamentoPolicial.value === "sim") {
-      return `Sendo assim, seguiremos com o procedimento de contingência onde efetuamos contato com a PRF de ${nomePolicial} através do telefone ${numeroPolicial}, onde fomos atendidos pelo Sr. ${ocorrenciaPolicial}, e o deixamos ciente da situação. Segue nossa proposta de pronta resposta: `;
+      return `Sendo assim, seguiremos com o procedimento de contingência onde efetuamos contato com a PRF de ${nomePolicialFormatado} através do telefone ${numeroPolicialFormatado}, onde fomos atendidos pelo Sr. ${ocorrenciaPolicial}, e o deixamos ciente da situação. Segue nossa proposta de pronta resposta: `;
     } else if (acionamentoPolicial.value === "nao") {
-      return `Sendo assim, seguimos com o procedimento de contingência onde tentamos contato com a PRF de ${nomePolicial} através do telefone ${numeroPolicial}, mas a ligação é direcionada para caixa postal. Segue nossa proposta de pronta resposta: `;
+      return `Sendo assim, seguimos com o procedimento de contingência onde tentamos contato com a PRF de ${nomePolicialFormatado} através do telefone ${numeroPolicialFormatado}, mas a ligação é direcionada para caixa postal. Segue nossa proposta de pronta resposta: `;
     } else if (acionamentoPolicial.value === "Continuidade") {
       return "Sendo assim, manteremos o acionamento policial ativo até normalizar a situação. Segue nossa proposta de pronta resposta:";
     }
@@ -101,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return "";
   }
 
+  // Função para exibir o texto gerado e copiá-lo para a área de transferência
   function exibirTextoGerado(texto) {
     const textoArea = document.getElementById("textoGerado");
     textoArea.value = texto;
@@ -110,26 +139,27 @@ document.addEventListener("DOMContentLoaded", () => {
     textoArea.style.display = "none";
 
     navigator.clipboard.writeText(texto)
-    .then(() => {
-      const alerta = document.getElementById("alerta");
-      alerta.style.display = "block";
-      setTimeout(() => {
-        alerta.style.opacity = "1";
-      }, 10);
-
-      setTimeout(() => {
-        alerta.style.opacity = "0";
+      .then(() => {
+        const alerta = document.getElementById("alerta");
+        alerta.style.display = "block";
         setTimeout(() => {
-          alerta.style.display = "none";
-        }, 500);
-      }, 2000);
-    })
-    .catch((err) => {
-      console.error("Erro ao copiar o texto: ", err);
-    });
+          alerta.style.opacity = "1";
+        }, 10);
+
+        setTimeout(() => {
+          alerta.style.opacity = "0";
+          setTimeout(() => {
+            alerta.style.display = "none";
+          }, 500);
+        }, 2000);
+      })
+      .catch((err) => {
+        console.error("Erro ao copiar o texto: ", err);
+      });
   }
 
-
+  // Evento de clique no botão de gerar texto
   document.getElementById("gerarTexto_tab").addEventListener("click", gerarTexto);
   document.getElementById("limparEscolhas").addEventListener("click", limparEscolhas);
+
 });
