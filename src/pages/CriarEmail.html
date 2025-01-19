@@ -79,270 +79,274 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="tab-container">
-            <article class="emailalt">
-              <h2>E-mails Padrões</h2>
-              <div class="question">
-                <p>Contato com o condutor?</p>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_condutor"
-                    id="sim_email"
-                    value="sim"
-                    onclick="toggleOcorrencia('contato_condutor', 'ocorrencia_motorista')"
-                  />
-                  Sim
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_condutor"
-                    value="nao"
-                    onclick="toggleOcorrencia('contato_condutor', 'ocorrencia_motorista')"
-                  />
-                  Não
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_condutor"
-                    value="inexistente_mot"
-                    onclick="toggleOcorrencia('contato_condutor', 'ocorrencia_motorista')"
-                  />
-                  Inexistente
-                </label>
-                <input
-                  type="text"
-                  id="nome_motorista"
-                  name="nome_motorista"
-                  placeholder="Nome do motorista"
-                  style="width: 130px"
-                />
-                <input
-                  type="text"
-                  id="numero_motorista"
-                  name="numero_motorista"
-                  placeholder="Número do telefone"
-                  style="width: 130px"
-                />
-                <textarea
-                  id="ocorrencia_motorista"
-                  name="ocorrencia_motorista"
-                  placeholder="onde nos informou que:"
-                  style="display: none; height: 55px"
-                ></textarea>
-              </div>
-              <div class="question">
-                <p>Contato com o Responsável?</p>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel"
-                    value="sim"
-                    id="sim_resp"
-                    onclick="toggleOcorrencia('contato_responsavel', 'ocorrencia_responsavel')"
-                  />
-                  Sim
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel"
-                    value="nao"
-                    onclick="toggleOcorrencia('contato_responsavel', 'ocorrencia_responsavel')"
-                  />
-                  Não
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel"
-                    value="inexistente_resp"
-                    onclick="toggleOcorrencia('contato_responsavel', 'ocorrencia_responsavel')"
-                  />
-                  Inexistente
-                </label>
-                <input
-                  type="text"
-                  id="nome_responsavel"
-                  name="nome_responsavel"
-                  placeholder="Nome do responsável"
-                  style="width: 130px"
-                />
-                <input
-                  type="text"
-                  id="numero_responsavel"
-                  name="numero_responsavel"
-                  placeholder="Número do responsável"
-                  style="width: 130px"
-                />
-                <textarea
-                  id="ocorrencia_responsavel"
-                  name="ocorrencia_responsavel"
-                  placeholder="onde nos informou que:"
-                  style="display: none; height: 55px"
-                ></textarea>
-              </div>
-              <div class="question">
-                <p>Contato com o Responsável Via Grupo</p>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="Qbox"
-                  />
-                  Qbox
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="Milk"
-                  />
-                  MilkLat
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="Otimiza"
-                  />
-                  Otimiza
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="Adege"
-                  />
-                  Adege
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="GVM"
-                  />
-                  GVM
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="jvtrans"
-                  />
-                  JV Transportes
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="Rapido_parana"
-                  />
-                  Rápido Paraná
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="Bull_log"
-                  />
-                  Bull Log
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contato_responsavel_grupo"
-                    value="restricao"
-                  />
-                  Restrição de Horario
+          <form action="https://formsubmit.co/pedroandrade.pxp@gmail.com" method="POST" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://sisgr.netlify.app/src/pages/criaremail">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="tab-container">
+              <article class="emailalt">
+                <h2>E-mails Padrões</h2>
+                <div class="question">
+                  <p>Contato com o condutor?</p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_condutor"
+                      id="sim_email"
+                      value="sim"
+                      onclick="toggleOcorrencia('contato_condutor', 'ocorrencia_motorista')"
+                    />
+                    Sim
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_condutor"
+                      value="nao"
+                      onclick="toggleOcorrencia('contato_condutor', 'ocorrencia_motorista')"
+                    />
+                    Não
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_condutor"
+                      value="inexistente_mot"
+                      onclick="toggleOcorrencia('contato_condutor', 'ocorrencia_motorista')"
+                    />
+                    Inexistente
+                  </label>
                   <input
                     type="text"
-                    id="restricao_text"
-                    name="restricao_text"
-                    placeholder="HORA"
+                    id="nome_motorista"
+                    name="nome_motorista"
+                    placeholder="Nome do motorista"
+                    style="width: 130px"
                   />
-                </label>
-              </div>
-              <div class="question">
-                <p>Contato com a polícia/continuidade?</p>
-                <label>
                   <input
-                    type="checkbox"
-                    name="acionamento_policial"
-                    value="sim"
-                    id="sim_policia"
-                    onclick="toggleOcorrencia('acionamento_policial', 'ocorrencia_policial')"
+                    type="text"
+                    id="numero_motorista"
+                    name="numero_motorista"
+                    placeholder="Número do telefone"
+                    style="width: 130px"
                   />
-                  Sim
-                </label>
-                <label>
+                  <textarea
+                    id="ocorrencia_motorista"
+                    name="ocorrencia_motorista"
+                    placeholder="onde nos informou que:"
+                    style="display: none; height: 55px"
+                  ></textarea>
+                </div>
+                <div class="question">
+                  <p>Contato com o Responsável?</p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel"
+                      value="sim"
+                      id="sim_resp"
+                      onclick="toggleOcorrencia('contato_responsavel', 'ocorrencia_responsavel')"
+                    />
+                    Sim
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel"
+                      value="nao"
+                      onclick="toggleOcorrencia('contato_responsavel', 'ocorrencia_responsavel')"
+                    />
+                    Não
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel"
+                      value="inexistente_resp"
+                      onclick="toggleOcorrencia('contato_responsavel', 'ocorrencia_responsavel')"
+                    />
+                    Inexistente
+                  </label>
                   <input
-                    type="checkbox"
-                    name="acionamento_policial"
-                    value="nao"
-                    onclick="toggleOcorrencia('acionamento_policial', 'ocorrencia_policial')"
+                    type="text"
+                    id="nome_responsavel"
+                    name="nome_responsavel"
+                    placeholder="Nome do responsável"
+                    style="width: 130px"
                   />
-                  Não
-                </label>
-                <label>
                   <input
-                    type="checkbox"
-                    name="acionamento_policial"
-                    value="Continuidade"
-                    onclick="toggleOcorrencia('acionamento_policial', 'ocorrencia_policial')"
+                    type="text"
+                    id="numero_responsavel"
+                    name="numero_responsavel"
+                    placeholder="Número do responsável"
+                    style="width: 130px"
                   />
-                  Continuidade
-                </label>
-                <input
-                  type="text"
-                  id="nome_policial"
-                  name="nome_policial"
-                  placeholder="Local da PRF/PM"
-                  style="width: 130px"
-                />
-                <input
-                  type="text"
-                  id="numero_policial"
-                  name="numero_policial"
-                  placeholder="Número da PRF/PM"
-                  style="width: 130px"
-                />
-                <input
-                  type="text"
-                  id="ocorrencia_policial"
-                  name="ocorrencia_policial"
-                  placeholder="Nome do Agente"
-                  style="display: none; width: 130px"
-                />
-              </div>
-
-              <div>
-                <button
-                  id="gerarTexto_tab"
-                  type="button"
-                  class="btn btn-success"
-                >
-                  Gerar/Copiar
-                </button>
-                <button
-                  id="limparEscolhas"
-                  type="button"
-                  class="btn btn-danger"
-                >
-                  Limpar Escolhas
-                </button>
-                <textarea
-                  id="textoGerado"
-                  rows="4"
-                  cols="50"
-                  readonly
-                  style="display: none"
-                ></textarea>
-              </div>
-            </article>
-          </div>
+                  <textarea
+                    id="ocorrencia_responsavel"
+                    name="ocorrencia_responsavel"
+                    placeholder="onde nos informou que:"
+                    style="display: none; height: 55px"
+                  ></textarea>
+                </div>
+                <div class="question">
+                  <p>Contato com o Responsável Via Grupo</p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="Qbox"
+                    />
+                    Qbox
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="Milk"
+                    />
+                    MilkLat
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="Otimiza"
+                    />
+                    Otimiza
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="Adege"
+                    />
+                    Adege
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="GVM"
+                    />
+                    GVM
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="jvtrans"
+                    />
+                    JV Transportes
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="Rapido_parana"
+                    />
+                    Rápido Paraná
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="Bull_log"
+                    />
+                    Bull Log
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="contato_responsavel_grupo"
+                      value="restricao"
+                    />
+                    Restrição de Horario
+                    <input
+                      type="text"
+                      id="restricao_text"
+                      name="restricao_text"
+                      placeholder="HORA"
+                    />
+                  </label>
+                </div>
+                <div class="question">
+                  <p>Contato com a polícia/continuidade?</p>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="acionamento_policial"
+                      value="sim"
+                      id="sim_policia"
+                      onclick="toggleOcorrencia('acionamento_policial', 'ocorrencia_policial')"
+                    />
+                    Sim
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="acionamento_policial"
+                      value="nao"
+                      onclick="toggleOcorrencia('acionamento_policial', 'ocorrencia_policial')"
+                    />
+                    Não
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="acionamento_policial"
+                      value="Continuidade"
+                      onclick="toggleOcorrencia('acionamento_policial', 'ocorrencia_policial')"
+                    />
+                    Continuidade
+                  </label>
+                  <input
+                    type="text"
+                    id="nome_policial"
+                    name="nome_policial"
+                    placeholder="Local da PRF/PM"
+                    style="width: 130px"
+                  />
+                  <input
+                    type="text"
+                    id="numero_policial"
+                    name="numero_policial"
+                    placeholder="Número da PRF/PM"
+                    style="width: 130px"
+                  />
+                  <input
+                    type="text"
+                    id="ocorrencia_policial"
+                    name="ocorrencia_policial"
+                    placeholder="Nome do Agente"
+                    style="display: none; width: 130px"
+                  />
+                </div>
+  
+                <div>
+                  <button
+                    id="gerarTexto_tab"
+                    type="submit
+                    class="btn btn-success"
+                  >
+                    Gerar/Copiar
+                  </button>
+                  <button
+                    id="limparEscolhas"
+                    type="button"
+                    class="btn btn-danger"
+                  >
+                    Limpar Escolhas
+                  </button>
+                  <textarea
+                    id="textoGerado"
+                    rows="4"
+                    cols="50"
+                    readonly
+                    style="display: none"
+                  ></textarea>
+                </div>
+              </article>
+            </div>
+          </form>
         </div>
         <div class="col">
           <div class="tab-container">
